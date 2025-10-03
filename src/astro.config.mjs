@@ -3,5 +3,6 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://neelab-3.github.io/tmp-meta-hunting-lp',
+  site: 'https://neelab-3.github.io',
+  base: '/tmp-meta-hunting-lp',
 });
