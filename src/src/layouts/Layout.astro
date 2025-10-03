@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>メタ就 | メタバース新卒 × 就活イベント</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-css-reset/dist/reset.min.css"
+    />
+    <!-- style.css入れる -->
+    <link rel="stylesheet" href={`${import.meta.env.BASE_URL}styles/style.css`} />
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "jah5bgi",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+    <script type="text/javascript">
+      var _0x49f6 = [
+        "pushState",
+        "appendChild",
+        "https://client-api.ma.myrec.jp",
+        "scrollHeight",
+        "querySelector",
+        "substring",
+        "substr",
+        "localStorage",
+        "addEventListener",
+        "body",
+        "split",
+        "&refererurl=",
+        "location",
+        "iframe",
+        "#ifram_src",
+        "contentWindow",
+        "length",
+        "scrollTop",
+        "clientHeight",
+        "ceil",
+        "getElementsByTagName",
+        "href",
+        "documentElement",
+        "&localtitle=",
+      ];
+      var _0x2906 = function (_0x49f60e, _0x2906c5) {
+        _0x49f60e = _0x49f60e - 0x0;
+        var _0x536740 = _0x49f6[_0x49f60e];
+        return _0x536740;
+      };
+      var page_percentage = 0x0;
+      var page_title = document["title"];
+      var page_referer = document["referrer"];
+      var page_href = window["location"][_0x2906("0x15")];
+      var script_trace = document["createElement"](_0x2906("0xd"));
+      var myrec_cid = "trace_adbb99aa-8986-11f0-ba52-000000000636";
+      var myrec_clientid = getQueryVariableMyrec(
+        document["location"]["search"],
+        myrec_cid
+      );
+      if (myrec_clientid) {
+        window[_0x2906("0x7")]["setItem"](myrec_cid, myrec_clientid);
+      } else {
+        myrec_clientid = window["localStorage"]["getItem"](myrec_cid);
+      }
+      var myrec_param = window["location"][_0x2906("0x15")]["replace"](
+        window[_0x2906("0xc")]["origin"],
+        ""
+      );
+      myrec_param = myrec_param[_0x2906("0xa")](myrec_cid);
+      var myrec_stateObject = {};
+      var myrec_newUrl = myrec_param[0x0];
+      var onstep_spl = myrec_newUrl[_0x2906("0x6")](
+        myrec_newUrl[_0x2906("0x10")] - 0x1,
+        myrec_newUrl[_0x2906("0x10")]
+      );
+      if ("?" == onstep_spl || "&" == onstep_spl) {
+        myrec_newUrl = myrec_newUrl[_0x2906("0x5")](
+          0x0,
+          myrec_newUrl[_0x2906("0x10")] - 0x1
+        );
+      }
+      history[_0x2906("0x0")](myrec_stateObject, "", myrec_newUrl);
+      script_trace["src"] =
+        "https://client-api.ma.myrec.jp/trace/cookie.html?cid=adbb99aa-8986-11f0-ba52-000000000636&ctype=ordinary&localurl=" +
+        page_href +
+        _0x2906("0xb") +
+        page_referer +
+        _0x2906("0x17") +
+        encodeURI(page_title) +
+        "&" +
+        myrec_cid +
+        "=" +
+        myrec_clientid;
+      script_trace["id"] = "ifram_src";
+      document[_0x2906("0x14")]("head")[0x0][_0x2906("0x1")](script_trace);
+      setTimeout(function () {
+        var _0x71e8a4 = document[_0x2906("0x4")](_0x2906("0xe"));
+        var _0x3b2bca =
+          document[_0x2906("0x16")][_0x2906("0x3")] ||
+          document[_0x2906("0x9")]["scrollHeight"];
+        var _0x5ab951 =
+          document["documentElement"][_0x2906("0x12")] ||
+          document["body"][_0x2906("0x12")];
+        if (_0x3b2bca > _0x5ab951) {
+          window[_0x2906("0x8")]("scroll", function (_0xc1a95d) {
+            var _0x494a73 =
+              document[_0x2906("0x16")][_0x2906("0x11")] ||
+              document[_0x2906("0x9")][_0x2906("0x11")];
+            var _0x1a1356 = _0x3b2bca - _0x5ab951 - _0x494a73;
+            if (page_percentage < 0x64) {
+              page_percentage = Math[_0x2906("0x13")](
+                ((_0x5ab951 + _0x494a73) / _0x3b2bca) * 0x64
+              );
+              _0x71e8a4[_0x2906("0xf")]["postMessage"](
+                "page_percentage=" + page_percentage,
+                _0x2906("0x2")
+              );
+            } else {
+            }
+          });
+        } else {
+          page_percentage = 0x64;
+        }
+        _0x71e8a4[_0x2906("0xf")]["postMessage"](
+          "page_percentage=" + page_percentage,
+          _0x2906("0x2")
+        );
+      }, 0x3e8);
+      function getQueryVariableMyrec(_0x26e058, _0x4b612a) {
+        var _0x3100e3 = _0x26e058[_0x2906("0x5")](0x1);
+        var _0x13b4df = _0x3100e3[_0x2906("0xa")]("&");
+        for (
+          var _0x11cd20 = 0x0;
+          _0x11cd20 < _0x13b4df[_0x2906("0x10")];
+          _0x11cd20++
+        ) {
+          var _0x47541f = _0x13b4df[_0x11cd20]["split"]("=");
+          if (_0x47541f[0x0] == _0x4b612a) {
+            return _0x47541f[0x1];
+          }
+        }
+        return ![];
+      }
+    </script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

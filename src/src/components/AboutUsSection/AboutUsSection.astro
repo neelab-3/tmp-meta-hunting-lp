@@ -1,0 +1,51 @@
+---
+import Message from "./Message.astro";
+import Table from "./Table.astro";
+---
+
+<section id="about-us">
+  <h2 class="about-us--title">運営会社</h2>
+  <Message />
+  <Table />
+</section>
+<style>
+  #about-us {
+    padding: 5rem 0;
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.6),
+        rgba(255, 255, 255, 0.6)
+      ),
+      url("../../assets/about-us-section/about_us_bg--minified.png");
+    background-position: center;
+    background-size: cover;
+
+    border-top: 2px solid #1daaab;
+  }
+
+  .about-us--title {
+    color: black;
+    font-size: 2.2rem;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+
+  .about-us--title::after {
+    content: "";
+    display: block;
+    margin: 1rem auto;
+    width: 2.4rem;
+    height: 8px;
+    background-color: #1daaab;
+  }
+
+  @media (max-width: 768px) {
+    #about-us {
+      padding: 3rem 1rem;
+    }
+
+    .about-us--title {
+      font-size: 1.8rem;
+    }
+  }
+</style>

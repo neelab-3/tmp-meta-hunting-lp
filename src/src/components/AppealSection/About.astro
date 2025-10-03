@@ -1,0 +1,75 @@
+<div class="appeal-section--logo-and-overview--container">
+  <h4 class="appeal-section--speechーbubble">
+    2025年<span class="appeal-section--speech-bubble--big">11</span>月<span
+      class="appeal-section--speech-bubble--big">26</span
+    >日<span class="appeal-section--speech-bubble--big">(水)</span><br />
+    13:30〜16:30開催!
+  </h4>
+  <div class="overview-container">
+    <p class="overview-item">
+      参加費<br />無料!
+    </p>
+    <p class="overview-item">
+      アバター参加で<br />スーツ不要・カメラOFF
+    </p>
+  </div>
+</div>
+<style>
+  .appeal-section--logo-and-overview--container {
+    width: 33%;
+  }
+
+  .appeal-section--speechーbubble {
+    font-size: 1.5rem;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .appeal-section--speech-bubble--big {
+    font-size: 2rem;
+  }
+
+  .overview-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 5px;
+    text-align: center;
+    color: white;
+  }
+
+  .overview-item {
+    font-size: clamp(0.75rem, 1.5vw, 1.2rem);
+    font-weight: normal;
+    font-family: sans-serif;
+    line-height: 1.1;
+    background-color: rgba(21, 127, 139, 0.7);
+    padding: 0.5rem;
+    outline: 3px solid rgba(21, 127, 139, 0.7);
+    outline-offset: 3px;
+  }
+
+  @media (max-width: 920px) and (min-width: 769px) {
+    .appeal-section--speechーbubble {
+      font-size: 1.2rem;
+    }
+
+    .appeal-section--speech-bubble--big {
+      font-size: 1.6rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .appeal-section--logo-and-overview--container {
+      width: auto;
+    }
+
+    .appeal-section--speechーbubble {
+      white-space: nowrap;
+    }
+
+    .overview-item {
+      white-space: nowrap;
+    }
+  }
+</style>

@@ -1,0 +1,80 @@
+---
+import { Image } from "astro:assets";
+import previewA from "../../assets/preview-section/preview-A.png";
+import previewB from "../../assets/preview-section/preview-B.png";
+import previewC from "../../assets/preview-section/preview-C.png";
+---
+
+<div id="preview-photos-wrapper">
+  <Image
+    class="preview-photo"
+    src={previewA}
+    alt=""
+    width={1024}
+    height={572}
+    loading="lazy"
+    widths={[300, 600, 800, 1024]}
+    sizes="(max-width: 768px) 90vw, (max-width: 1024px) 45vw, 30vw"
+  />
+  <Image
+    class="preview-photo"
+    src={previewB}
+    alt=""
+    width={1024}
+    height={570}
+    loading="lazy"
+    widths={[300, 600, 800, 1024]}
+    sizes="(max-width: 768px) 90vw, (max-width: 1024px) 45vw, 30vw"
+  />
+  <Image
+    class="preview-photo"
+    src={previewC}
+    alt=""
+    width={1024}
+    height={570}
+    loading="lazy"
+    widths={[300, 600, 800, 1024]}
+    sizes="(max-width: 768px) 90vw, (max-width: 1024px) 45vw, 30vw"
+  />
+</div>
+<style>
+  #preview-photos-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto 4rem auto;
+    gap: 1.5rem;
+    width: 90%;
+  }
+
+  .preview-photo {
+    width: 100%;
+    height: auto;
+    box-shadow: 1px 1px 3px 3px white;
+  }
+
+  /* モバイル: ~768px */
+  @media (max-width: 768px) {
+    #preview-photos-wrapper {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      width: 90%;
+      margin-bottom: 2rem;
+    }
+  }
+
+  /* タブレット: 768px~1024px */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    #preview-photos-wrapper {
+      gap: 1rem;
+      width: 90%;
+      margin-bottom: 3rem;
+    }
+  }
+
+  /* デスクトップ（大）: 1440px~ */
+  @media (min-width: 1440px) {
+    #preview-photos-wrapper {
+      max-width: 1400px;
+    }
+  }
+</style>

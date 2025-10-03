@@ -1,0 +1,52 @@
+---
+import Spacer from "./Spacer.astro";
+import Logo from "./Logo.astro";
+import EventInfo from "./EventInfo.astro";
+import Timetable from "./Timetable.astro";
+import HowToParticipate from "./HowToParticipate.astro";
+import IntroductionOfSomeOfTheParticipatingCompanies from "./IntroductionOfSomeOfTheParticipatingCompanies.astro";
+---
+
+<section id="about-event-with-timetable">
+  <Spacer />
+  <div class="about">
+    <Logo />
+    <EventInfo />
+    <Timetable />
+    <HowToParticipate />
+    <IntroductionOfSomeOfTheParticipatingCompanies />
+  </div>
+</section>
+<style>
+  #about-event-with-timetable {
+    background-color: #021629;
+    padding-bottom: 5rem;
+  }
+
+  .about {
+    width: 73%;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    .about {
+      width: 90%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .about {
+      width: 95%;
+    }
+
+    #about-event-with-timetable {
+      padding-bottom: 3rem;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .about {
+      max-width: 1200px;
+    }
+  }
+</style>

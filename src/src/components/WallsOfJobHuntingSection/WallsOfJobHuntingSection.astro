@@ -1,0 +1,49 @@
+---
+import { Image } from "astro:assets";
+import WallsOfJobHuntingSectionIntroImgs from "./WallsOfJobHuntingSectionIntroImgs.astro";
+import WallsOfJobHuntingSectionTitle from "./WallsOfJobHuntingSectionTitle.astro";
+import WallsWrapper from "./WallsWrapper.astro";
+import dotArrow from "../../assets/walls-of-job-hunting-section/dot_down_arrow.png";
+---
+
+<section id="walls-of-job-hunting">
+  <WallsOfJobHuntingSectionIntroImgs />
+  <WallsOfJobHuntingSectionTitle />
+  <WallsWrapper />
+  <Image src={dotArrow} alt="" class="down-arrow" />
+</section>
+<style>
+  #walls-of-job-hunting {
+    position: relative;
+    background-color: black;
+    padding-bottom: 10rem;
+  }
+
+  .down-arrow {
+    position: absolute;
+    bottom: -3rem;
+    width: 6vw;
+    height: 6vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @media (max-width: 768px) {
+    #walls-of-job-hunting {
+      padding-bottom: 5rem;
+    }
+
+    .down-arrow {
+      bottom: -2rem;
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .down-arrow {
+      width: 80px;
+      height: 80px;
+    }
+  }
+</style>

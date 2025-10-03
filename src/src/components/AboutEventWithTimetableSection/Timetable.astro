@@ -1,0 +1,225 @@
+---
+import TrapezoidWithBorderBottom from "./TrapezoidWithBorderBottom.astro";
+---
+
+<TrapezoidWithBorderBottom title="タイムテーブル">
+  <ul class="timetable-wrapper" slot="content">
+    <li>
+      <span class="time-wrapper">
+        <time class="" datetime="13:30">13:00</time> 〜
+        <time class="" datetime="13:15">13:15</time>
+      </span>
+      <div class="timetable-content">
+        <h4 class="timetable-content-title">
+          「メタ就」<wbr>入室&<wbr>イベント<wbr>ガイダンス
+        </h4>
+        <p class="timetable-content-description">
+          ◆ 操作<wbr>説明・<wbr>各<wbr>ブースの<wbr>案内を<wbr>行います。<wbr>初めての<wbr>方も<wbr>安心!
+        </p>
+      </div>
+    </li>
+    <li>
+      <span class="time-wrapper">
+        <time class="" datetime="13:15">13:15</time> 〜
+        <time class="" datetime="14:00">14:00</time>
+      </span>
+      <div class="timetable-content">
+        <h4 class="timetable-content-title">企業<wbr>ブース<wbr>OPEN!</h4>
+        <p class="timetable-content-description">
+          ◆ 興味の<wbr>ある<wbr>企業<wbr>ブースを<wbr>自由に<wbr>訪問。
+        </p>
+        <p class="timetable-content-description">
+          ◆ 各社の<wbr>説明会・<wbr>社員<wbr>トーク・<wbr>質疑<wbr>応答<wbr>などを<wbr>体験!
+        </p>
+
+        <h4 class="timetable-content-title">キャリアの<wbr>相談・<wbr>個別<wbr>面談<wbr>タイム</h4>
+        <p class="timetable-content-description">
+          ◆ 採用<wbr>担当者<wbr>との<wbr>1on1<wbr>面談や、<wbr>気になる<wbr>ことを<wbr>直接<wbr>質問!
+        </p>
+
+        <h4 class="timetable-content-title">
+          スペシャル<wbr>コンテンツ/<wbr>イベント<wbr>限定<wbr>セッション
+        </h4>
+        <p class="timetable-content-description">
+          ◆ 先輩<wbr>社員に<wbr>よる<wbr>リアル<wbr>トーク
+        </p>
+        <p class="timetable-content-description">
+          ◆「ここだけの<wbr>話」や<wbr>「内定の<wbr>コツ」も<wbr>聞ける<wbr>かも?
+        </p>
+      </div>
+    </li>
+    <li class="last-item">
+      <span class="time-wrapper">
+        <time class="" datetime="15:00">15:00</time>
+      </span>
+      <div class="timetable-content">
+        <h4 class="timetable-content-title">CLOSE</h4>
+        <p class="timetable-content-description">
+          ◆ 本日の<wbr>プログラムは<wbr>終了と<wbr>なります
+        </p>
+        <p class="timetable-content-description">
+          ◆ アンケート<wbr>ご回答で<wbr>特典<wbr>あり!
+        </p>
+      </div>
+    </li>
+  </ul>
+</TrapezoidWithBorderBottom>
+<style>
+  * {
+    font-family: sans-serif;
+    font-weight: bold;
+  }
+
+  .timetable-wrapper {
+    list-style: none;
+    padding: 2rem 0;
+    margin: 2rem 0;
+    position: relative;
+  }
+
+  .timetable-wrapper li {
+    display: flex;
+    gap: 0;
+    margin-bottom: 2rem;
+    position: relative;
+    align-items: start;
+  }
+
+  .timetable-wrapper li::after {
+    content: "";
+    position: absolute;
+    left: 200px;
+    top: 0.6rem;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #1aaeae;
+    border-radius: 50%;
+    transform: translateX(-14px) translateY(-6px);
+    z-index: 0;
+  }
+
+  /* 各アイテムから次のアイテムまでの線（最後のアイテムを除く） */
+  .timetable-wrapper li:not(.last-item)::before {
+    content: "";
+    position: absolute;
+    left: 201px;
+    top: calc(0.6rem + 18px);
+    height: calc(100% + 2rem - 18px);
+    width: 2px;
+    background-color: #1aaeae;
+    transform: translateX(-1px);
+  }
+
+  /* 丸を改めて描画 */
+  .timetable-wrapper li .time-wrapper::before {
+    content: "";
+    position: absolute;
+    left: 200px;
+    top: 0.4rem;
+    width: 18px;
+    height: 18px;
+    background-color: #1aaeae;
+    border-radius: 50%;
+    transform: translateX(-8px);
+    z-index: 2;
+  }
+
+  .time-wrapper {
+    width: 150px;
+    text-align: right;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+    white-space: nowrap;
+    margin-top: 0.2rem;
+    position: relative;
+  }
+
+  .timetable-content {
+    flex: 1;
+    padding-left: 5.5rem;
+  }
+
+  .timetable-content-title {
+    color: #1aaeae;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.8rem;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  .timetable-content-title:not(:first-child) {
+    margin-top: 2rem;
+  }
+
+  .timetable-content-description {
+    line-height: 2;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  @media (max-width: 768px) {
+    .timetable-wrapper li {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 2.5rem;
+    }
+
+    .timetable-wrapper li::after {
+      left: 15px;
+      transform: translateX(-15px) translateY(-6px);
+    }
+
+    .timetable-wrapper li:not(.last-item)::before {
+      left: 15px;
+      transform: translateX(-1px);
+    }
+
+    .timetable-wrapper li .time-wrapper::before {
+      left: -2.5rem;
+      top: 0.4rem;
+      transform: translateX(6px);
+    }
+
+    .time-wrapper {
+      width: auto;
+      text-align: left;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .timetable-content {
+      padding-left: 0;
+    }
+
+    .timetable-content-title {
+      font-size: 1.5rem;
+    }
+
+    .timetable-content-description {
+      font-size: 1.1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .timetable-wrapper {
+      padding: 1.5rem 0;
+      margin: 1.5rem 0;
+    }
+
+    .time-wrapper {
+      font-size: 1rem;
+    }
+
+    .timetable-content-title {
+      font-size: 1.3rem;
+    }
+
+    .timetable-content-description {
+      font-size: 1rem;
+    }
+  }
+</style>

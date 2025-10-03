@@ -1,0 +1,125 @@
+<section id="appeal-of-achievements">
+  <div class="corner-border">
+    <h2 class="appeal-of-achievements-title">
+      業界平均の5倍にあたる<wbr /><span class="title--yellow">入社率25%</span
+      ><wbr />という実績が、<br />
+      私たちの<wbr />サポート品質の証です。<br />
+      もう、<wbr />一人で悩む<wbr />必要はありません。<br />
+      あなたの就活、<wbr />私たちに<wbr />すべてお任せください。
+    </h2>
+    <div class="bottom-corners"></div>
+  </div>
+</section>
+<style>
+  #appeal-of-achievements {
+    display: flex;
+    justify-content: center;
+    padding: 5rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../../assets/appeal-of-achievements-section/appeal-of-achievements-section.jpeg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .appeal-of-achievements-title {
+    margin: 0;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    line-height: 2;
+    text-align: center;
+    text-shadow:
+      0 0 10px rgba(32, 166, 169, 1),
+      0 0 20px rgba(32, 166, 169, 1),
+      0 0 30px rgba(32, 166, 169, 1);
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  .title--yellow {
+    color: #f5b246;
+    font-family: sans-serif;
+  }
+
+  .corner-border {
+    position: relative;
+    display: inline-block;
+    padding: 60px 80px;
+  }
+
+  .corner-border::before,
+  .corner-border::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 5px solid white;
+    filter: drop-shadow(0 0 10px rgba(32, 166, 169, 1))
+            drop-shadow(0 0 20px rgba(32, 166, 169, 1))
+            drop-shadow(0 0 30px rgba(32, 166, 169, 1));
+  }
+
+  .corner-border::before {
+    top: 0;
+    left: 0;
+    border-right: none;
+    border-bottom: none;
+  }
+
+  .corner-border::after {
+    top: 0;
+    right: 0;
+    border-left: none;
+    border-bottom: none;
+  }
+
+  .bottom-corners {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+
+  .bottom-corners::before,
+  .bottom-corners::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 5px solid white;
+    filter: drop-shadow(0 0 10px rgba(32, 166, 169, 1))
+            drop-shadow(0 0 20px rgba(32, 166, 169, 1))
+            drop-shadow(0 0 30px rgba(32, 166, 169, 1));
+  }
+
+  .bottom-corners::before {
+    bottom: 0;
+    left: 0;
+    border-right: none;
+    border-top: none;
+  }
+
+  .bottom-corners::after {
+    bottom: 0;
+    right: 0;
+    border-left: none;
+    border-top: none;
+  }
+
+  @media (max-width: 768px) {
+    #appeal-of-achievements {
+      padding: 5rem 2rem;
+    }
+
+    .corner-border {
+      padding: 3rem 2rem;
+    }
+
+    .appeal-of-achievements-title {
+      font-size: 1.4rem;
+    }
+  }
+</style>

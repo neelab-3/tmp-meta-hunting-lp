@@ -1,0 +1,35 @@
+---
+import SpeechBubbleSVG from "./SpeechBubbleSVG.astro";
+import SupportsTitle from "./SupportsTitle.astro";
+import SupportsText from "./SupportsText.astro";
+import SupportsContents from "./SupportsContents.astro";
+---
+
+<section id="supports">
+  <SpeechBubbleSVG />
+  <SupportsTitle />
+  <SupportsText />
+  <SupportsContents />
+</section>
+<style>
+  #supports {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1.5rem;
+    background: black;
+  }
+
+  @media (min-width: 768px) {
+    #supports {
+      padding: 3.5rem 2.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    #supports {
+      padding: 5rem;
+    }
+  }
+</style>

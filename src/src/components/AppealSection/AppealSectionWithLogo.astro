@@ -1,0 +1,58 @@
+---
+import About from "./About.astro";
+import CTAButton from "./CTAButton.astro";
+import LogoImage from "./LogoImage.astro";
+---
+
+<section id="appeal-section--with-logo">
+  <div class="appeal-section--with-logo--inner">
+    <LogoImage />
+    <About />
+    <CTAButton />
+  </div>
+
+  <style>
+    #appeal-section--with-logo {
+      display: flex;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      min-height: 13.5rem;
+      padding: 2rem 0;
+      width: 100%;
+    }
+
+    #appeal-section--with-logo::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url("../../assets/appeal-section/appeal-section.jpeg")
+        no-repeat center center;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      filter: brightness(0.3);
+      z-index: -5;
+      min-height: 13.5rem;
+      width: 100%;
+    }
+
+    .appeal-section--with-logo--inner {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      width: 80%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 1023px) {
+      .appeal-section--with-logo--inner {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        gap: 2rem;
+      }
+    }
+  </style>
+</section>

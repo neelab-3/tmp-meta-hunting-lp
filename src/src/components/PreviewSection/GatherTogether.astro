@@ -1,0 +1,94 @@
+<div class="gather-together-wrapper">
+  <div class="diagonal-stripes"></div>
+  <h2 class="logo-subtitle">あつまれ就活の森</h2>
+  <div class="diagonal-stripes"></div>
+</div>
+<style>
+  .gather-together-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .diagonal-stripes {
+    width: 50px;
+    height: 15px;
+    background: repeating-linear-gradient(
+      /* 斜め方向（左上→右下） */ 135deg,
+      transparent 6px,
+      /* ストライプ間隔を狭く（10px） */ transparent 10px,
+      white 10px,
+      /* 白線の太さは2px */ white 12px
+    );
+    border-radius: 1px;
+  }
+
+  .logo-subtitle {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    line-height: 1;
+  }
+
+  /* タブレット: 768px~1024px */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .diagonal-stripes {
+      width: 45px;
+      height: 13px;
+    }
+
+    .logo-subtitle {
+      font-size: 1.2rem;
+    }
+  }
+
+  /* モバイル（大）: 480px~768px */
+  @media (min-width: 480px) and (max-width: 768px) {
+    .diagonal-stripes {
+      width: 40px;
+      height: 12px;
+    }
+
+    .logo-subtitle {
+      font-size: 1rem;
+    }
+
+    .gather-together-wrapper {
+      gap: 0.4rem;
+    }
+  }
+
+  /* モバイル（小）: 361px~480px */
+  @media (min-width: 361px) and (max-width: 480px) {
+    .diagonal-stripes {
+      width: 30px;
+      height: 10px;
+    }
+
+    .logo-subtitle {
+      font-size: 0.8rem;
+    }
+
+    .gather-together-wrapper {
+      gap: 0.3rem;
+    }
+  }
+
+  /* モバイル（極小）: ~360px */
+  @media (max-width: 360px) {
+    .diagonal-stripes {
+      width: 20px;
+      height: 8px;
+    }
+
+    .logo-subtitle {
+      font-size: 0.5rem;
+    }
+
+    .gather-together-wrapper {
+      gap: 0.2rem;
+    }
+  }
+</style>

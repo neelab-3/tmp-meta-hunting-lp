@@ -1,0 +1,75 @@
+---
+import PreviewText from "./PreviewText.astro";
+import CatchPhrase from "./CatchPhrase.astro";
+import PreviewPhotos from "./PreviewPhotos.astro";
+import Movie from "./Movie.astro";
+---
+
+<section id="preview-section">
+  <!-- デスクトップ用 -->
+  <div class="preview-text-container desktop-only">
+    <PreviewText text="これからの壁をすべて乗り越え、" />
+    <PreviewText
+      text="誰もが納得してキャリアの第一歩を踏み出せる、全く新しい就活のカタチ。"
+    />
+  </div>
+  <!-- モバイル用 -->
+  <div class="preview-text-container mobile-only">
+    <PreviewText text="これからの壁をすべて乗り越え、" />
+    <PreviewText text="誰もが納得してキャリアの" />
+    <PreviewText text="第一歩を踏み出せる、" />
+    <PreviewText text="全く新しい就活のカタチ。" />
+  </div>
+  <CatchPhrase />
+  <PreviewPhotos />
+  <Movie />
+</section>
+<style>
+  #preview-section {
+    background:
+      linear-gradient(rgba(24, 138, 143, 0.85), rgba(24, 138, 143, 0.85)),
+      url("../../assets/preview-section/bg.jpeg") no-repeat center center;
+    background-size: cover;
+    height: auto;
+    padding: 7rem 0;
+  }
+
+  .preview-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 5rem;
+  }
+
+  .desktop-only {
+    display: flex;
+  }
+
+  .mobile-only {
+    display: none;
+  }
+
+  /* モバイル: ~768px */
+  @media (max-width: 768px) {
+    #preview-section {
+      padding: 3rem 0;
+    }
+
+    .desktop-only {
+      display: none;
+    }
+
+    .mobile-only {
+      display: flex;
+    }
+  }
+
+  /* タブレット: 768px~1024px */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    #preview-section {
+      padding: 5rem 0;
+    }
+  }
+</style>

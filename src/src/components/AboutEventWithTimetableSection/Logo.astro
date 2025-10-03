@@ -1,0 +1,155 @@
+---
+import { Image } from "astro:assets";
+import logo from "../../assets/appeal-section/logo.png";
+---
+
+<div class="logo--container">
+  <div class="logo">
+    <Image class="appeal-section-logo" src={logo} alt="メタ就" loading="lazy" />
+    <p class="logo--concept">メタバース新卒×就活イベント</p>
+    <div class="chevron-decoration">
+      <div class="chevron-group left">
+        <div class="chevron-item left"></div>
+        <div class="chevron-item left"></div>
+        <div class="chevron-item left"></div>
+      </div>
+      <span class="chevron-text">2025秋</span>
+      <div class="chevron-group right">
+        <div class="chevron-item right"></div>
+        <div class="chevron-item right"></div>
+        <div class="chevron-item right"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .logo--container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+  }
+
+  .logo {
+    margin: 5px 0;
+    transform: translateY(-40%);
+    font-size: 20px;
+    transform-origin: center top;
+    width: fit-content;
+    position: relative;
+  }
+
+  .appeal-section-logo {
+    max-width: 495px;
+    max-height: 175px;
+  }
+
+  .logo--concept {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 5px;
+    left: 20px;
+    font-weight: bold;
+    font-size: 1.3rem;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #add8f4;
+  }
+
+  /* シェブロン装飾のコンテナ */
+  .chevron-decoration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 3px 0;
+  }
+
+  /* 中央のテキスト */
+  .chevron-text {
+    color: white;
+    font-size: 2.5em;
+    font-weight: 100;
+    letter-spacing: 2px;
+    margin: 0 10px;
+    display: inline-block;
+  }
+
+  /* シェブロングループ */
+  .chevron-group {
+    display: flex;
+    gap: 1px;
+  }
+
+  /* 個別のシェブロン */
+  .chevron-item {
+    width: 2em;
+    height: 4em;
+    position: relative;
+  }
+
+  /* 左向きシェブロン */
+  .chevron-item.left::before,
+  .chevron-item.left::after {
+    content: "";
+    position: absolute;
+    background: white;
+    left: 0;
+  }
+
+  .chevron-item.left::before {
+    top: 0.8em;
+    width: 1.25em;
+    height: 1.75em;
+    transform: skewX(-40deg);
+  }
+
+  .chevron-item.left::after {
+    bottom: 1em;
+    width: 1.25em;
+    height: 0.6em;
+    transform: skewX(40deg);
+    left: 0.55em;
+  }
+
+  /* 右向きシェブロン */
+  .chevron-item.right::before,
+  .chevron-item.right::after {
+    content: "";
+    position: absolute;
+    background: white;
+    right: 0;
+  }
+
+  .chevron-item.right::before {
+    top: 0.8em;
+    width: 1.25em;
+    height: 1.75em;
+    transform: skewX(35deg);
+  }
+
+  .chevron-item.right::after {
+    bottom: 1em;
+    width: 1.25em;
+    height: 0.6em;
+    transform: skewX(-35deg);
+    right: 0.55em;
+  }
+
+  @media (max-width: 768px) {
+    .logo {
+      transform: translateY(-20%) scale(0.75);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .logo {
+      transform: translateY(-10%) scale(0.55);
+    }
+  }
+</style>

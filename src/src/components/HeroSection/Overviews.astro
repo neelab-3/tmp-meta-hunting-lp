@@ -1,0 +1,76 @@
+<div class="overview-container">
+  <h4 class="overview-item">
+    参加費<br /><span>無料!</span>
+  </h4>
+  <h4 class="overview-item">
+    アバター参加で<br /><span>スーツ不要・カメラOFF</span>
+  </h4>
+  <h4 class="overview-item">
+    地方在住者の<br /><span>費用支援制度</span>
+  </h4>
+</div>
+<style>
+  .overview-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    text-align: center;
+    color: white;
+  }
+
+  .overview-item {
+    font-size: 1rem;
+    font-weight: normal;
+    font-family: sans-serif;
+    line-height: 1.1;
+    background-color: rgba(21, 127, 139, 0.9);
+    padding: 0.8rem 1.5rem;
+    outline: 3px solid rgba(21, 127, 139, 0.9);
+    outline-offset: 3px;
+    width: 100%;
+    max-width: 20rem;
+  }
+
+  .overview-item span {
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: sans-serif;
+  }
+
+  @media (min-width: 768px) {
+    .overview-container {
+      gap: 1.2rem;
+      margin-top: 2rem;
+    }
+
+    .overview-item {
+      font-size: 1.3rem;
+      padding: 0.9rem 1.8rem;
+      max-width: 22rem;
+    }
+
+    .overview-item span {
+      font-size: 1.7rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .overview-container {
+      flex-direction: row;
+      gap: 1.2rem;
+      margin-top: 2.5rem;
+    }
+
+    .overview-item {
+      font-size: 1.5rem;
+      padding: 1rem 2rem;
+      width: auto;
+      max-width: none;
+    }
+
+    .overview-item span {
+      font-size: 2rem;
+    }
+  }
+</style>

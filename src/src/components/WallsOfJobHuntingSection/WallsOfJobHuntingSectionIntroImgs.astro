@@ -1,0 +1,103 @@
+---
+import { Image } from "astro:assets";
+import triangle from "../../assets/walls-of-job-hunting-section/triangle.png";
+import left from "../../assets/walls-of-job-hunting-section/line_left.png";
+import right from "../../assets/walls-of-job-hunting-section/line_right.png";
+---
+
+<div class="img-wrapper">
+  <Image
+    src={triangle}
+    alt="でも、その理想現実は難しいかも・・・"
+    class="triangle"
+    loading="lazy"
+  />
+  <div class="line-wrapper">
+    <Image src={left} alt="" class="line" />
+    <Image src={right} alt="" class="line" />
+  </div>
+</div>
+<style>
+  .img-wrapper {
+    position: relative;
+    top: -2.5rem;
+    width: 100%;
+  }
+
+  .triangle {
+    width: 35%;
+    height: 35%;
+    margin: 0 auto;
+  }
+
+  .line-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 15rem;
+    width: 100%;
+  }
+
+  .line {
+    width: 25%;
+  }
+
+  @media (max-width: 768px) {
+    .img-wrapper {
+      top: -1.5rem;
+    }
+
+    .triangle {
+      width: 60%;
+      height: 60%;
+    }
+
+    .line-wrapper {
+      gap: 2rem;
+    }
+
+    .line {
+      width: 35%;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .img-wrapper {
+      top: -2rem;
+    }
+
+    .triangle {
+      width: 45%;
+      height: 45%;
+    }
+
+    .line-wrapper {
+      gap: 8rem;
+    }
+
+    .line {
+      width: 30%;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .img-wrapper {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .triangle {
+      width: 30%;
+      height: 30%;
+      max-width: 500px;
+    }
+
+    .line-wrapper {
+      gap: 20rem;
+    }
+
+    .line {
+      width: 20%;
+      max-width: 350px;
+    }
+  }
+</style>

@@ -1,0 +1,517 @@
+---
+import { Image } from "astro:assets";
+import ReasonsTitle from "./ReasonsTitle.astro";
+
+// 理由番号画像
+import reason1 from "../../assets/reasons-section/reason01.png";
+import reason2 from "../../assets/reasons-section/reason02.png";
+import reason3 from "../../assets/reasons-section/reason03.png";
+
+// 画像セット
+import dinosaur from "../../assets/reasons-section/dinosaur.png";
+import interview from "../../assets/reasons-section/interview.png";
+import sp from "../../assets/reasons-section/japan_on_sp.png";
+
+// 画像セット
+import glass from "../../assets/reasons-section/magnifying_glass.png";
+import discuss from "../../assets/reasons-section/discussion.png";
+import graph from "../../assets/reasons-section/graph.png";
+
+// 画像セット
+import piece from "../../assets/reasons-section/piece.png";
+import room from "../../assets/reasons-section/room.png";
+import train from "../../assets/reasons-section/bullet_train.png";
+---
+
+<section id="reasons-section">
+  <div class="container">
+    <ReasonsTitle />
+    <div class="reason-container">
+      <Image src={reason1} alt="" class="reason-num-img" />
+      <div class="reason-title">
+        <h3 class="title">新体験</h3>
+        <p class="title-detail">メタバースだから、会社の"リアル"に触れられる</p>
+      </div>
+
+      <div class="card-container">
+        <div class="corner-border">
+          <Image
+            src={dinosaur}
+            alt=""
+            loading="lazy"
+            widths={[300, 400, 600, 800]}
+            sizes="(max-width: 768px) 90vw, (max-width: 1024px) 45vw, 30vw"
+          />
+          <h4 class="card-title">没入型イベントで<br />雰囲気を体験</h4>
+          <div class="bottom-corners"></div>
+        </div>
+        <div class="corner-border">
+          <Image
+            src={interview}
+            alt=""
+            loading="lazy"
+            widths={[300, 400, 600, 800]}
+            sizes="(max-width: 768px) 90vw, (max-width: 1024px) 45vw, 30vw"
+          />
+          <h4 class="card-title">アバターで<br />気軽に質問</h4>
+          <div class="bottom-corners"></div>
+        </div>
+        <div class="corner-border">
+          <Image
+            src={sp}
+            alt=""
+            loading="lazy"
+            widths={[300, 400, 600, 800]}
+            sizes="(max-width: 768px) 90vw, (max-width: 1024px) 45vw, 30vw"
+          />
+          <h4 class="card-title">スマホで<br />全国から参加</h4>
+          <div class="bottom-corners"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reason-container">
+      <Image src={reason2} alt="" class="reason-num-img" />
+      <div class="reason-title">
+        <h3 class="title">徹底支援</h3>
+        <p class="title-detail">イベント後が本番。プロが"内定"まで伴走</p>
+      </div>
+
+      <div class="card-container">
+        <div class="corner-border">
+          <Image
+            src={glass}
+            alt=""
+            loading="lazy"
+            widths={[300, 400, 600, 800]}
+            sizes="(max-width: 768px) 90vw, (max-width: 1024px) 45vw, 30vw"
+          />
+          <h4 class="card-title">ミスマッチを防ぐ<br />情報提供</h4>
+          <p class="card-title-detail">
+            求人票だけでは分からない、社風
+            <wbr />
+            や働きがいといった「生の情報」
+            <wbr />
+            をエージェントが提供します。
+          </p>
+          <div class="bottom-corners"></div>
+        </div>
+        <div class="corner-border">
+          <Image
+            src={discuss}
+            alt=""
+            loading="lazy"
+            widths={[300, 400, 600, 800]}
+            sizes="(max-width: 768px) 90vw, (max-width: 1024px) 45vw, 30vw"
+          />
+          <h4 class="card-title">あなただけの<br />就活プラン</h4>
+          <p class="card-title-detail">
+            ES添削や面接対策はもちろん、
+            <wbr />
+            「やりたいことが分からない」と
+            <wbr />
+            いう段階からでも、プロが親身
+            <wbr />
+            にキャリア相談に乗ります。
+          </p>
+          <div class="bottom-corners"></div>
+        </div>
+        <div class="corner-border">
+          <Image
+            src={graph}
+            alt=""
+            loading="lazy"
+            widths={[300, 400, 600, 800]}
+            sizes="(max-width: 768px) 90vw, (max-width: 1024px) 45vw, 30vw"
+          />
+          <h4 class="card-title">
+            就職サポート後の<br />入社率は業界平均の5倍
+          </h4>
+          <p class="card-title-detail">
+            弊社の就職サポートでの入社率
+            <wbr />
+            は平均25%
+            <br />
+            業界平均5%を大きく上回る実績があります。
+          </p>
+          <div class="bottom-corners"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reason-container">
+      <Image src={reason3} alt="" class="reason-num-img" />
+      <div class="reason-title">
+        <h3 class="title">地方学生の味方</h3>
+        <p class="title-detail">"上京"の不安を解消する手厚いサポート</p>
+      </div>
+
+      <div class="card-container">
+        <div class="corner-border">
+          <Image
+            src={piece}
+            alt=""
+            loading="lazy"
+            widths={[300, 400, 600, 800]}
+            sizes="(max-width: 768px) 90vw, (max-width: 1024px) 45vw, 30vw"
+          />
+          <h4 class="card-title">最大20万円の<br />上京支援金</h4>
+          <p class="card-title-detail">
+            新生活を支える上京支援金制度を持つ企業が多数参加。
+            <wbr />
+            採用が決まると、その企業から支援金が支給されます。※補助対象は条件あり
+          </p>
+          <div class="bottom-corners"></div>
+        </div>
+        <div class="corner-border">
+          <Image
+            src={room}
+            alt=""
+            loading="lazy"
+            widths={[300, 400, 600, 800]}
+            sizes="(max-width: 768px) 90vw, (max-width: 1024px) 45vw, 30vw"
+          />
+          <h4 class="card-title">住まいも<br />お得に</h4>
+          <p class="card-title-detail">
+            初期費用3万円で入居可能な物件情報や、新生活に必要な家電をお得に購入できるサービスもご案内。
+          </p>
+          <div class="bottom-corners"></div>
+        </div>
+        <div class="corner-border">
+          <Image
+            src={train}
+            alt=""
+            loading="lazy"
+            widths={[300, 400, 600, 800]}
+            sizes="(max-width: 768px) 90vw, (max-width: 1024px) 45vw, 30vw"
+          />
+          <h4 class="card-title">金銭的な<br />不安を解消</h4>
+          <p class="card-title-detail">
+            面接時の交通費割引（予定）など、経済的な負担を軽減し、安心して就活に専念できる環境を整えます。
+          </p>
+          <div class="bottom-corners"></div>
+        </div>
+      </div>
+    </div>
+
+    <!--  -->
+  </div>
+</section>
+<style>
+  #reasons-section {
+    background-image: url("../../assets/reasons-section/reasons-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 2rem;
+  }
+
+  .container {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 3.5%;
+  }
+
+  .reason-container {
+    position: relative;
+    box-shadow: 1px 1px 3px 3px white;
+    margin-top: 80px;
+    margin-bottom: 120px;
+    padding: 40px 0;
+    background-color: rgba(8, 116, 122, 0.8);
+  }
+
+  .reason-num-img {
+    position: absolute;
+    min-width: 370px;
+    width: 37%;
+    min-height: 60px;
+    height: 4.2rem;
+    top: -4.2rem;
+    left: 0;
+  }
+
+  .reason-title {
+    text-shadow:
+      0 0 10px rgba(32, 166, 169, 1),
+      0 0 20px rgba(32, 166, 169, 1),
+      0 0 30px rgba(32, 166, 169, 1);
+  }
+
+  .title {
+    text-align: center;
+    font-size: 5rem;
+    line-height: 1;
+  }
+
+  .title-detail {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 64px;
+    padding: 0 64px;
+    margin-top: 20px;
+  }
+
+  .card-title {
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    padding: 1.2rem 0.5rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .card-title-detail {
+    width: 85%;
+    margin: 0 auto;
+    font-family: sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .corner-border img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+
+  .corner-border {
+    position: relative;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding-bottom: 1.5rem;
+  }
+
+  .corner-border::before,
+  .corner-border::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 5px solid white;
+    filter: drop-shadow(0 0 10px rgba(32, 166, 169, 1))
+      drop-shadow(0 0 20px rgba(32, 166, 169, 1))
+      drop-shadow(0 0 30px rgba(32, 166, 169, 1));
+  }
+
+  .corner-border::before {
+    top: 0;
+    left: 0;
+    border-right: none;
+    border-bottom: none;
+  }
+
+  .corner-border::after {
+    top: 0;
+    right: 0;
+    border-left: none;
+    border-bottom: none;
+  }
+
+  .bottom-corners {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+
+  .bottom-corners::before,
+  .bottom-corners::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 5px solid white;
+    filter: drop-shadow(0 0 10px rgba(32, 166, 169, 1))
+      drop-shadow(0 0 20px rgba(32, 166, 169, 1))
+      drop-shadow(0 0 30px rgba(32, 166, 169, 1));
+  }
+
+  .bottom-corners::before {
+    bottom: 0;
+    left: 0;
+    border-right: none;
+    border-top: none;
+  }
+
+  .bottom-corners::after {
+    bottom: 0;
+    right: 0;
+    border-left: none;
+    border-top: none;
+  }
+
+  /* モバイル: ~768px */
+  @media (max-width: 768px) {
+    #reasons-section {
+      padding-top: 1rem;
+    }
+
+    .container {
+      max-width: 90%;
+      padding: 2%;
+    }
+
+    .reason-container {
+      margin-top: 50px;
+      margin-bottom: 60px;
+      padding: 20px 0;
+    }
+
+    .reason-num-img {
+      min-width: 200px;
+      width: 50%;
+      min-height: 40px;
+      height: 2.5rem;
+      top: -2.5rem;
+    }
+
+    .title {
+      font-size: 2.5rem;
+    }
+
+    .title-detail {
+      font-size: 1.2rem;
+      padding: 0 1rem;
+    }
+
+    .card-container {
+      grid-template-columns: 1fr;
+      gap: 32px;
+      padding: 0 16px;
+      margin-top: 16px;
+    }
+
+    .card-title {
+      font-size: 1.2rem;
+      padding: 0.8rem 0.5rem;
+    }
+
+    .card-title-detail {
+      font-size: 0.95rem;
+      width: 90%;
+    }
+
+    .corner-border img {
+      height: 180px;
+    }
+
+    .corner-border::before,
+    .corner-border::after,
+    .bottom-corners::before,
+    .bottom-corners::after {
+      width: 20px;
+      height: 20px;
+      border-width: 3px;
+    }
+  }
+
+  /* タブレット: 768px~1024px */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+      max-width: 85%;
+    }
+
+    .reason-container {
+      margin-top: 60px;
+      margin-bottom: 80px;
+      padding: 30px 0;
+    }
+
+    .reason-num-img {
+      min-width: 280px;
+      width: 40%;
+      min-height: 50px;
+      height: 3.2rem;
+      top: -3.2rem;
+    }
+
+    .title {
+      font-size: 3.5rem;
+    }
+
+    .title-detail {
+      font-size: 1.5rem;
+    }
+
+    .card-container {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      padding: 0 32px;
+    }
+
+    .card-title {
+      font-size: 1.3rem;
+    }
+
+    .card-title-detail {
+      font-size: 1rem;
+    }
+
+    .corner-border img {
+      height: 200px;
+    }
+
+    .corner-border::before,
+    .corner-border::after,
+    .bottom-corners::before,
+    .bottom-corners::after {
+      width: 25px;
+      height: 25px;
+      border-width: 4px;
+    }
+  }
+
+  /* デスクトップ（小）: 1024px~1280px */
+  @media (min-width: 1024px) and (max-width: 1280px) {
+    .card-container {
+      gap: 24px;
+      padding: 0 24px;
+    }
+  }
+
+  /* デスクトップ（中）: 1280px~1440px */
+  @media (min-width: 1280px) and (max-width: 1440px) {
+    .card-container {
+      gap: 40px;
+      padding: 0 40px;
+    }
+  }
+
+  /* 大画面: 1440px~ */
+  @media (min-width: 1440px) {
+    .container {
+      max-width: 1400px;
+    }
+
+    .reason-container {
+      margin-top: 100px;
+      margin-bottom: 140px;
+    }
+
+    .card-container {
+      gap: 64px;
+      padding: 0 64px;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  /* 超大画面: 1920px~ */
+  @media (min-width: 1920px) {
+    .container {
+      max-width: 1600px;
+    }
+
+    .card-container {
+      max-width: 1400px;
+    }
+  }
+</style>

@@ -1,0 +1,71 @@
+---
+import { Image } from "astro:assets";
+import hand from "../../assets/hero-section/hero--hand.png";
+import CatchPhrase from "./CatchPhrase.astro";
+import About from "./About.astro";
+import Overviews from "./Overviews.astro";
+---
+
+<section id="hero-section">
+  <div id="hero-section-container">
+    <CatchPhrase />
+    <About />
+    <Overviews />
+  </div>
+  <Image src={hand} alt="" id="hero-section--hand" />
+</section>
+<style>
+  #hero-section {
+    position: relative;
+    width: 100%;
+    z-index: 0;
+    padding: 2.45rem 2rem;
+  }
+
+  #hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../../assets/hero-section/hero-section__bg.jpeg"); /* publicフォルダに配置した画像 */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.3); /*明るさを60%に */
+    z-index: -5;
+  }
+
+  #hero-section-container {
+    max-width: 1250px;
+    margin: 0 auto;
+  }
+
+  #hero-section--hand {
+    position: absolute;
+    bottom: 0rem;
+    right: 5%;
+    height: 300px;
+    width: 300px;
+    z-index: -4;
+  }
+
+  @media (min-width: 768px) {
+    #hero-section--hand {
+      height: 400px;
+      width: 400px;
+      right: 10%;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    #hero-section--hand {
+      height: min(45vw, 700px);
+      width: min(45vw, 700px);
+    }
+  }
+
+  @media (min-width: 1900px) {
+    #hero-section--hand {
+      right: calc((100vw - 1900px) / 2 + 95px);
+    }
+  }
+</style>

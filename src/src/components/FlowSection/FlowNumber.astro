@@ -1,0 +1,41 @@
+---
+const { text, number, color } = Astro.props;
+---
+
+<h3 class="flow-number" style={`color: ${color}`}>
+  {text}<br /><span class="flow-number-big">{number}</span>
+</h3>
+<style>
+  .flow-number {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  white-space: pre-line;
+
+  font-size: 1.0rem;
+  text-align: center;
+  line-height: 1.2;
+
+  margin: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 80px;
+  height: 80px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  flex-shrink: 0;
+
+  color: white;
+  border: 2px dotted white;
+
+  box-shadow:
+    0 0 6px   rgba(255, 0, 200, 0.1),
+    0 0 12px  rgba(255, 0, 242, 0.1),
+    0 0 24px  rgba(255, 0, 179, 0.1),
+    0 0 48px  rgba(255, 0, 128, 0.1);
+}
+.flow-number-big {
+  font-size: 1.6rem;
+}
+</style>

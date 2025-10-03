@@ -1,0 +1,71 @@
+---
+const { text = "Q", size = "200px" } = Astro.props;
+
+// CSS単位をサポート
+const isNumeric = typeof size === "number" || !isNaN(Number(size));
+const cssSize = isNumeric ? `${size}px` : size;
+
+// viewBox用の数値は200で固定（比率を保つため）
+const viewBoxSize = 200;
+const center = viewBoxSize / 2;
+const radius = viewBoxSize * 0.45;
+const strokeWidth = viewBoxSize * 0.125;
+const cutWidth = viewBoxSize * 0.05;
+const fontSize = viewBoxSize * 0.4;
+---
+
+<svg
+  class="circle-x"
+  style={`min-width: ${cssSize}; height: ${cssSize};`}
+  viewBox={`0 0 ${viewBoxSize} ${viewBoxSize}`}
+>
+  <defs>
+    <mask id="x-mask">
+      <circle cx={center} cy={center} r={radius} fill="white"></circle>
+      <rect
+        x={center - cutWidth / 2}
+        y="0"
+        width={cutWidth}
+        height={viewBoxSize}
+        fill="black"
+        transform={`rotate(45 ${center} ${center})`}></rect>
+      <rect
+        x={center - cutWidth / 2}
+        y="0"
+        width={cutWidth}
+        height={viewBoxSize}
+        fill="black"
+        transform={`rotate(-45 ${center} ${center})`}></rect>
+    </mask>
+  </defs>
+  <circle
+    cx={center}
+    cy={center}
+    r={radius}
+    fill="none"
+    stroke="#999"
+    stroke-width={strokeWidth}
+    mask="url(#x-mask)"></circle>
+  <text
+    x={center}
+    y={center}
+    text-anchor="middle"
+    dominant-baseline="central"
+    class="circle-number"
+    style={`font-size: ${fontSize}px`}>{text}</text
+  >
+</svg>
+<style>
+  .circle-x {
+    display: block;
+    margin: 0.5rem;
+  }
+
+  .circle-number {
+    font-weight: bold;
+    fill: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-family: sans-serif;
+    line-height: 1;
+  }
+</style>

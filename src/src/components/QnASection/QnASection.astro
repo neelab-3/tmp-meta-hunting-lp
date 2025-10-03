@@ -1,0 +1,110 @@
+---
+import QnAItem from "./QnAItem.astro";
+---
+
+<section id="q-n-a-section">
+  <h2 class="q-n-a--title">Q&A</h2>
+  <h3 class="q-n-a--text">よくある質問</h3>
+  <div class="q-n-a-items-wrapper">
+    <QnAItem isQ={true}> 本当にすべて無料ですか？ </QnAItem>
+    <QnAItem isQ={false}>
+      はい、学生の皆様はイベント参加から就職支援まで、すべてのサービスを無料でご利用いただけます。
+    </QnAItem>
+    <QnAItem isQ={true}> どんな企業が参加しますか？ </QnAItem>
+    <QnAItem isQ={false}>
+      主に首都圏(1都3県+大阪)に本社を置く、IT、営業、販売、総合商社などの企業が参加予定です。
+      <br />
+      特に、成長中のベンチャーや中小企業など、皆さんが皆さんが自力では見つけにくい優良企業との出会いを提供します。
+    </QnAItem>
+    <QnAItem isQ={true}>
+      イベント参加後、必ずエージェントサービスを利用しないといけませんか？
+    </QnAItem>
+    <QnAItem isQ={false}>
+      いいえ、無理に利用する必要はございません。イベントで興味を持った企業に直接応募することも可能です。
+      <br />
+      ただ、弊社のサポートをご利用いただくことで、より深い企業情報の提供や先行対策が可能です。
+    </QnAItem>
+    <QnAItem isQ={true}> 上京支援を受けるための条件を教えてください。 </QnAItem>
+    <QnAItem isQ={false}>
+      弊社サービスを利用して、ご紹介した企業様へ就職を決められた方が対象となります。
+      <br />
+      詳細は個別面談の際にご説明いたします。
+    </QnAItem>
+    <QnAItem isQ={true}>
+      メタバースを使ったことがなくても大丈夫ですか？
+    </QnAItem>
+    <QnAItem isQ={false}>
+      もちろんです。特別な機械は不要で、スマートフォンのブラウザから直感的に操作できます。
+      <br />
+      事前に操作を体験できる機会も設ける予定です。
+    </QnAItem>
+  </div>
+</section>
+<style>
+  #q-n-a-section {
+    background-color: #1daaab;
+    padding: 5rem 0;
+  }
+
+  .q-n-a--title {
+    color: #1daaab;
+    font-size: 7rem;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    text-shadow:
+      /* 内側の枠線 (1px) - 白色 */
+      -1px -1px 0 white,
+      0 -1px 0 white,
+      1px -1px 0 white,
+      1px 0 0 white,
+      1px 1px 0 white,
+      0 1px 0 white,
+      -1px 1px 0 white,
+      -1px 0 0 white,
+      /* 外側の枠線 (2px) - より滑らかな角 */ -2px -2px 0 white,
+      -2px -1px 0 white,
+      -2px 0 0 white,
+      -2px 1px 0 white,
+      -2px 2px 0 white,
+      -1px 2px 0 white,
+      0 2px 0 white,
+      1px 2px 0 white,
+      2px 2px 0 white,
+      2px 1px 0 white,
+      2px 0 0 white,
+      2px -1px 0 white,
+      2px -2px 0 white,
+      1px -2px 0 white,
+      0 -2px 0 white,
+      -1px -2px 0 white,
+      /* ぼやけた黒い影 */ 3px 3px 8px rgba(0, 0, 0, 0.3),
+      0 0 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .q-n-a--text {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 2;
+    text-shadow:
+      3px 3px 8px rgba(0, 0, 0, 0.3),
+      0 0 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .q-n-a-items-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .q-n-a--title {
+      font-size: 4rem;
+    }
+
+    .q-n-a--text {
+      font-size: 1.8rem;
+    }
+  }
+</style>

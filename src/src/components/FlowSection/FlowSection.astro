@@ -1,0 +1,462 @@
+---
+import { Image } from "astro:assets";
+import FlowNumber from "./FlowNumber.astro";
+import FlowItem from "./FlowItem.astro";
+import arrow from "../../assets/flow-section/down_arrow.png";
+import borderArrow from "../../assets/flow-section/border_arrow.png";
+---
+
+<section id="flow-section">
+  <div class="corner-border">
+    <h2 class="label-title">
+      FLOW
+      <br />
+      <p class="label-subtitle">イベント参加までの流れ</p>
+    </h2>
+    <div class="bottom-corners"></div>
+  </div>
+  <div class="list-container">
+    <div class="overlay">
+      <div class="list-the-flow-content">
+        <FlowNumber text="STEP" number="01" color="#ffffff" />
+        <FlowItem
+          label="公式LINEを<wbr>友だち追加"
+          text="下のボタンから<wbr>LINEを<wbr>追加してください。"
+          color="#ffffff"
+        />
+      </div>
+      <!-- TODO: LINEの登録へ遷移するように変更 -->
+      <button
+        class="appeal-section--cta-button"
+        type="button"
+        onclick="location.href='https://liff.line.me/2008080672-5PBV9x90?sl=175889275418875266147423'"
+      >
+        <div>
+          無料でイベントに参加する<br />
+          <small>&lt; 簡単30秒LINE登録 &gt;</small>
+        </div>
+        <span class="appeal-section--cta-button-gt">&gt;</span>
+        <span class="appeal-section--cta-button-speech-bubble"
+          >&bsol;先着150名様限定&sol;</span
+        >
+      </button>
+      <Image src={arrow} alt="" class="arrow" />
+    </div>
+    <div class="overlay">
+      <div class="list-the-flow-content">
+        <FlowNumber text="STEP" number="02" color="#ffffff" />
+        <FlowItem
+          label="参加希望<wbr>フォームを<wbr>入力"
+          text="LINEで届く<wbr>簡単な<wbr>フォームに<wbr>回答するだけ！"
+          color="#ffffff"
+        />
+      </div>
+      <Image src={arrow} alt="" class="arrow" />
+    </div>
+    <div class="overlay">
+      <div class="list-the-flow-content">
+        <FlowNumber text="STEP" number="03" color="#ffffff" />
+        <FlowItem
+          label="イベント<wbr>参加方法の<wbr>ご案内"
+          text="参加希望者に<wbr>メタバース空間へ<wbr>アクセスURLを<wbr>送付します<wbr>イベント開催前に<wbr>メタバース空間を<wbr>体験することも<wbr>できる！"
+          color="#ffffff"
+        />
+      </div>
+      <Image src={arrow} alt="" class="arrow" />
+    </div>
+    <div class="overlay">
+      <div class="list-the-flow-content">
+        <FlowNumber text="STEP" number="04" color="#ffffff" />
+        <FlowItem
+          label="イベント参加"
+          text="イベント参加用の<wbr>URLから<wbr>メタバース空間へ<wbr>アクセス！<wbr>当日は、<wbr>スマホのみ！<wbr>スーツ不要、<wbr>カメラOFFで<wbr>参加OK！"
+          color="#ffffff"
+        />
+      </div>
+    </div>
+  </div>
+  <Image src={borderArrow} alt="" class="border-arrow" />
+</section>
+<style>
+  #flow-section {
+    position: relative;
+    padding: 60px 20px;
+    text-align: center;
+    background: radial-gradient(
+        ellipse 2500px 1000px at 100% 0%,
+        #ff009d 0%,
+        transparent 45%
+      ),
+      radial-gradient(
+        ellipse 600px 400px at 85% 20%,
+        #1565c0 0%,
+        transparent 40%
+      ),
+      radial-gradient(
+        ellipse 800px 1500px at 45% 30%,
+        rgb(228, 117, 248) 0%,
+        transparent 60%
+      ),
+      radial-gradient(
+        ellipse 1000px 1000px at 40% 40%,
+        rgb(228, 117, 248) 0%,
+        transparent 60%
+      ),
+      radial-gradient(
+        ellipse 1000px 800px at 10% 90%,
+        rgb(211, 80, 255) 0%,
+        transparent 60%
+      ),
+      radial-gradient(
+        ellipse 1000px 800px at 30% 70%,
+        rgb(211, 80, 255) 0%,
+        transparent 60%
+      ),
+      radial-gradient(
+        ellipse 600px 600px at 85% 80%,
+        #008dff 0%,
+        transparent 50%
+      ),
+      linear-gradient(135deg, #00adff 0%, #3e2547 100%);
+  }
+
+  .label-title {
+    margin: 0;
+    color: #cd4aba;
+    font-size: 5rem;
+    font-weight: bold;
+    line-height: 1.3;
+
+    text-shadow:
+      -1px -1px 0 white,
+      0 -1px 0 white,
+      1px -1px 0 white,
+      1px 0 0 white,
+      1px 1px 0 white,
+      0 1px 0 white,
+      -1px 1px 0 white,
+      -1px 0 0 white,
+      -2px -2px 0 white,
+      -2px -1px 0 white,
+      -2px 0 0 white,
+      -2px 1px 0 white,
+      -2px 2px 0 white,
+      -1px 2px 0 white,
+      0 2px 0 white,
+      1px 2px 0 white,
+      2px 2px 0 white,
+      2px 1px 0 white,
+      2px 0 0 white,
+      2px -1px 0 white,
+      2px -2px 0 white,
+      1px -2px 0 white,
+      0 -2px 0 white,
+      -1px -2px 0 white,
+      0 0 6px rgba(255, 0, 0, 0.9),
+      0 0 12px rgba(255, 0, 0, 0.7),
+      0 0 24px rgba(255, 0, 0, 0.5),
+      0 0 48px rgba(255, 0, 0, 0.3);
+  }
+
+  .label-subtitle {
+    margin: 0;
+    color: white;
+    font-size: 2rem;
+    font-weight: normal;
+    line-height: 1.3;
+    text-shadow:
+      0 0 8px rgba(255, 0, 0, 0.8),
+      0 0 16px rgba(255, 0, 0, 0.6),
+      0 0 24px rgba(255, 0, 0, 0.4);
+  }
+
+  /* @NOTE: 角のボーダー */
+  .corner-border {
+    position: relative;
+    display: inline-block;
+    padding: 40px 60px;
+  }
+
+  .bottom-corners {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+
+  .corner-border::before,
+  .corner-border::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 3px solid white;
+  }
+
+  .corner-border::before {
+    top: 0;
+    left: 0;
+    border-right: none;
+    border-bottom: none;
+  }
+
+  .corner-border::after {
+    top: 0;
+    right: 0;
+    border-left: none;
+    border-bottom: none;
+  }
+
+  .bottom-corners::before,
+  .bottom-corners::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 3px solid white;
+  }
+
+  .bottom-corners::before {
+    bottom: 0;
+    left: 0;
+    border-right: none;
+    border-top: none;
+  }
+
+  .bottom-corners::after {
+    bottom: 0;
+    right: 0;
+    border-left: none;
+    border-top: none;
+  }
+
+  .list-the-flow-content {
+    display: flex;
+  }
+
+  .img {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    object-fit: contain;
+    clip-path: polygon(
+      /* 左上 */ 0% 0%,
+      /* 右上 */ 100% 0%,
+      /* 右下（斜め） */ 97% 100%,
+      /* 左下（斜め） */ 0% 100%
+    );
+  }
+
+  .list-container {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .overlay {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 75%;
+    padding: 2rem;
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .arrow {
+    position: absolute;
+    left: calc(50% - 2rem);
+    bottom: -70px;
+  }
+
+  #appeal-section {
+    display: flex;
+    position: relative;
+    border-top: 3px solid #20a6a9;
+    border-bottom: 3px solid #20a6a9;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+  }
+
+  #appeal-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("../../assets/appeal-section/appeal-section.jpeg") no-repeat
+      center center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.3);
+    z-index: -5;
+    height: 100px;
+    width: 100%;
+  }
+
+  .appeal-section--content {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    color: white;
+  }
+
+  .appeal-section--title {
+    font-size: 4rem;
+    margin-right: 1rem;
+  }
+
+  .appeal-section--date {
+    font-size: 1.5rem;
+    margin: 0;
+    padding-top: 0.7rem;
+  }
+
+  .appeal-section--date--big {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .appeal-section--cta-button {
+    display: flex;
+    position: relative;
+    max-width: 25rem;
+    width: 90%;
+    padding: 0.5rem 3rem;
+    border: none;
+    border-radius: 40px;
+    background-color: #07c655;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 30px;
+    * {
+      font-family: sans-serif;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+  }
+
+  .appeal-section--cta-button-gt {
+    position: absolute;
+    right: 1.5rem;
+  }
+
+  .appeal-section--cta-button-speech-bubble {
+    position: absolute;
+    top: -2.2rem;
+    font-size: 1.5rem;
+  }
+
+  .border-arrow {
+    position: absolute;
+    bottom: -2.5rem;
+    left: calc(50% - 2rem);
+  }
+
+  @media (max-width: 768px) {
+    .list-the-flow-content {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .overlay {
+      width: 85%;
+      padding: 1.5rem;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    .appeal-section--cta-button {
+      padding: 0.5rem 2rem;
+      * {
+        font-size: 1rem;
+      }
+    }
+
+    .appeal-section--cta-button-speech-bubble {
+      font-size: 1.2rem;
+    }
+
+    .appeal-section--cta-button-gt {
+      right: 1rem;
+    }
+
+    .corner-border {
+      padding: 30px 40px;
+    }
+
+    .label-title {
+      font-size: 3.5rem;
+    }
+
+    .label-subtitle {
+      font-size: 1.5rem;
+    }
+
+    .corner-border::before,
+    .corner-border::after,
+    .bottom-corners::before,
+    .bottom-corners::after {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .overlay {
+      width: 90%;
+      padding: 1rem;
+    }
+
+    .appeal-section--cta-button {
+      padding: 0.4rem 1.5rem;
+      * {
+        font-size: 0.9rem;
+      }
+    }
+
+    .appeal-section--cta-button-speech-bubble {
+      font-size: 1rem;
+      top: -2rem;
+    }
+
+    .appeal-section--cta-button-gt {
+      right: 0.8rem;
+    }
+
+    .corner-border {
+      padding: 20px 30px;
+    }
+
+    .label-title {
+      font-size: 2.5rem;
+    }
+
+    .label-subtitle {
+      font-size: 1.2rem;
+    }
+
+    .corner-border::before,
+    .corner-border::after,
+    .bottom-corners::before,
+    .bottom-corners::after {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .overlay {
+      max-width: 1000px;
+    }
+
+    .list-container {
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+</style>

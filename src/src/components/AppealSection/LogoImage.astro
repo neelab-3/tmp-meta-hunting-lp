@@ -1,0 +1,166 @@
+---
+import { Image } from "astro:assets";
+import logo from "../../assets/appeal-section/logo.png";
+---
+
+<div class="appeal-section-logo--container">
+  <div class="appeal-section-logo--wrapper">
+    <div class="appeal-section-logo--image-wrapper">
+      <Image class="appeal-section-logo" src={logo} alt="メタ就" width={275} height={96} loading="lazy" />
+      <p class="appeal-section-logo--concept">メタバース新卒×就活イベント</p>
+    </div>
+    <div class="chevron-decoration">
+      <div class="chevron-group left">
+        <div class="chevron-item left"></div>
+        <div class="chevron-item left"></div>
+        <div class="chevron-item left"></div>
+      </div>
+      <span class="chevron-text">2025秋</span>
+      <div class="chevron-group right">
+        <div class="chevron-item right"></div>
+        <div class="chevron-item right"></div>
+        <div class="chevron-item right"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .appeal-section-logo--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 33%;
+    min-width: 275px;
+    height: fit-content;
+    padding: 20px 0 0 0;
+    flex-shrink: 0;
+  }
+
+  .appeal-section-logo--wrapper {
+    width: 275px;
+    height: fit-content;
+    flex-shrink: 0;
+  }
+
+  .appeal-section-logo--image-wrapper {
+    position: relative;
+    width: 275px;
+    height: fit-content;
+  }
+
+  .appeal-section-logo {
+    width: 275px;
+    max-height: 80px;
+    margin: 5px auto;
+    display: block;
+  }
+
+  .appeal-section-logo--concept {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 8px;
+    font-weight: bold;
+    font-size: 0.75rem;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #add8f4;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 768px) {
+    .appeal-section-logo--container {
+      max-width: 100%;
+      align-items: center;
+    }
+
+    .appeal-section-logo--wrapper {
+      width: 275px;
+    }
+  }
+
+  /* シェブロン装飾のコンテナ */
+  .chevron-decoration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 3px 0;
+    white-space: nowrap;
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  /* 中央のテキスト */
+  .chevron-text {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 100;
+    letter-spacing: 2px;
+    margin: 0 10px;
+    display: inline-block;
+  }
+
+  /* シェブロングループ */
+  .chevron-group {
+    display: flex;
+    gap: 1px;
+  }
+
+  /* 個別のシェブロン */
+  .chevron-item {
+    width: 16px;
+    height: 35px;
+    position: relative;
+  }
+
+  /* 左向きシェブロン */
+  .chevron-item.left::before,
+  .chevron-item.left::after {
+    content: "";
+    position: absolute;
+    background: white;
+    left: 0;
+  }
+
+  .chevron-item.left::before {
+    top: 7px;
+    width: 10px;
+    height: 15px;
+    transform: skewX(-40deg);
+  }
+
+  .chevron-item.left::after {
+    bottom: 8px;
+    width: 10px;
+    height: 5px;
+    transform: skewX(40deg);
+    left: 5px;
+  }
+
+  /* 右向きシェブロン */
+  .chevron-item.right::before,
+  .chevron-item.right::after {
+    content: "";
+    position: absolute;
+    background: white;
+    right: 0;
+  }
+
+  .chevron-item.right::before {
+    top: 7px;
+    width: 10px;
+    height: 15px;
+    transform: skewX(35deg);
+  }
+
+  .chevron-item.right::after {
+    bottom: 8px;
+    width: 10px;
+    height: 5px;
+    transform: skewX(-35deg);
+    right: 5px;
+  }
+</style>

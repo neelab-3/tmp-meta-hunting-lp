@@ -1,0 +1,80 @@
+---
+import VoicesTitle from "./VoicesTitle.astro";
+import Voices from "./Voices.astro";
+---
+
+<section id="voices-section">
+  <VoicesTitle />
+  <Voices />
+</section>
+<style>
+  #voices-section {
+    padding: 3.5rem;
+    position: relative;
+    text-align: center;
+    background:
+      radial-gradient(
+        ellipse 60% 80% at 12.5% 25%,
+        #2daef1 0%,
+        transparent 100%
+      ),
+      /* 1 */
+        radial-gradient(
+          ellipse 60% 80% at 37.5% 25%,
+          #efa5ef 0%,
+          transparent 100%
+        ),
+      /* 2 */
+        radial-gradient(
+          ellipse 60% 80% at 62.5% 25%,
+          #9b3abc 0%,
+          transparent 100%
+        ),
+      /* 3 */
+        radial-gradient(
+          ellipse 60% 80% at 87.5% 25%,
+          #1f49b7 0%,
+          transparent 100%
+        ),
+      /* 4 */
+        radial-gradient(
+          ellipse 60% 80% at 12.5% 75%,
+          #7c20a7 0%,
+          transparent 100%
+        ),
+      /* 5 */
+        radial-gradient(
+          ellipse 60% 80% at 37.5% 75%,
+          #5154c4 0%,
+          transparent 100%
+        ),
+      /* 6 */
+        radial-gradient(
+          ellipse 60% 80% at 62.5% 75%,
+          #05a8da 0%,
+          transparent 100%
+        ),
+      /* 7 */
+        radial-gradient(
+          ellipse 60% 80% at 87.5% 75%,
+          #00abd6 0%,
+          transparent 100%
+        ); /* 8 */
+    background-color: #0f0f1a;
+    mix-blend-mode: screen;
+  }
+
+  /* モバイル: ~768px */
+  @media (max-width: 768px) {
+    #voices-section {
+      padding: 2rem 1rem;
+    }
+  }
+
+  /* タブレット: 768px~1024px */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    #voices-section {
+      padding: 2.5rem 2rem;
+    }
+  }
+</style>

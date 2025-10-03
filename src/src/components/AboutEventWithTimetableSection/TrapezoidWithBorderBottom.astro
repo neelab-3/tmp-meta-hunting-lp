@@ -1,0 +1,60 @@
+---
+const { title, mb = "5rem" } = Astro.props;
+---
+
+<div class="container" style=`margin-bottom: ${mb};`>
+  <h3 class="trapezoid">{title}</h3>
+  <slot name="content" />
+</div>
+<style>
+  * {
+    font-family: sans-serif;
+    font-weight: bold;
+  }
+
+  .container {
+    position: relative;
+    border-top: 1px solid white;
+  }
+
+  .trapezoid {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+    background-color: white;
+    color: #021629;
+    padding: 0px 96px;
+    margin: 0;
+    text-align: center;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+    font-weight: bold;
+    display: inline-block;
+    font-size: 1.9rem;
+  }
+
+  .trapezoid::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 1px;
+    background-color: white;
+    transform: translateX(-50%);
+    left: 50%;
+  }
+
+  @media (max-width: 768px) {
+    .trapezoid {
+      padding: 0px 60px;
+      font-size: 1.6rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .trapezoid {
+      padding: 0px 40px;
+      font-size: 1.3rem;
+    }
+  }
+</style>

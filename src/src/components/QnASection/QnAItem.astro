@@ -1,0 +1,53 @@
+---
+import XnCircle from "./XnCircle.astro";
+
+const { isQ } = Astro.props;
+
+const bgColor = isQ ? "black" : "1daaab";
+const mt = isQ ? "2.5rem" : "0";
+const text = isQ ? "Q" : "A";
+const textClass = isQ ? "item-text item-text-q" : "item-text item-text-a";
+---
+
+<div style=`background: ${bgColor};margin-top: ${mt};` class="item-wrapper">
+  <XnCircle text={text} size="4rem" />
+  <p class={textClass}>
+    <slot />
+  </p>
+</div>
+<style>
+  .item-wrapper {
+    display: flex;
+    width: 73%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .item-text {
+    display: flex;
+    align-items: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .item-text-q {
+    font-size: 1.7rem;
+  }
+
+  .item-text-a {
+    font-size: 1.3rem;
+  }
+
+  @media (max-width: 768px) {
+    .item-wrapper {
+      width: 90%;
+    }
+
+    .item-text-q,
+    .item-text-a {
+      font-size: 1rem;
+    }
+  }
+</style>

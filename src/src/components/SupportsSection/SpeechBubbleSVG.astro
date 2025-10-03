@@ -1,0 +1,65 @@
+---
+---
+
+<svg viewBox="0 0 650 150" class="speech-bubble">
+  <defs>
+    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="coloredBlur"></feMergeNode>
+        <feMergeNode in="coloredBlur"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+
+    <!-- グラデーション定義 -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#015C5D;stop-opacity:0.8"></stop>
+      <stop offset="100%" style="stop-color:#0E3C4F;stop-opacity:0.8"></stop>
+    </linearGradient>
+  </defs>
+
+  <!-- 背景のボックス（余白付き） -->
+  <path d="M 40 20 L 610 20 L 610 100 L 40 100 Z" fill="url(#bgGradient)"
+  ></path>
+
+  <!-- テキストを背景の上に配置（常に中央） -->
+  <text
+    x="50%"
+    y="40%"
+    text-anchor="middle"
+    dominant-baseline="central"
+    fill="white"
+    font-size="35"
+    font-weight="bold"
+    font-family="sans-serif"
+  >
+    メタ就はイベントだけじゃない！
+  </text>
+
+  <!-- シアンカラーのボーダー -->
+  <g stroke="#00ffff" stroke-width="2.5" fill="none" filter="url(#neonGlow)">
+    <!-- 左上のL字コーナー -->
+    <path d="M 30 40 L 30 10 L 70 10"></path>
+
+    <!-- 右上の短いライン -->
+    <line x1="580" y1="10" x2="620" y2="10"></line>
+    <line x1="620" y1="10" x2="620" y2="80"></line>
+
+    <!-- 右側の部分ライン -->
+    <line x1="620" y1="80" x2="620" y2="110"></line>
+
+    <!-- 右下のL字コーナー -->
+    <line x1="620" y1="110" x2="344" y2="110"></line>
+
+    <!-- 吹き出しの三角形の右側斜線 -->
+    <line x1="345" y1="110" x2="310" y2="145"></line>
+  </g>
+</svg>
+<style>
+  .speech-bubble {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+  }
+</style>

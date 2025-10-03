@@ -1,0 +1,134 @@
+---
+import { Image } from "astro:assets";
+import voice1 from "../../assets/voices-section/voice1_with_frame.png";
+import voice2 from "../../assets/voices-section/voice2_with_frame.png";
+import voice3 from "../../assets/voices-section/voice3_with_frame.png";
+---
+
+<div class="container">
+  <div class="wrapper">
+    <div class="voice">
+      <Image
+        src={voice1}
+        alt=""
+        class="face"
+        widths={[200, 300, 400, 600]}
+        sizes="(max-width: 768px) 90vw, (max-width: 1024px) 30vw, 23vw"
+      />
+      <p class="name">山田 太郎(北海道)</p>
+      <p class="content">
+        ●●●●●●●●10●●●●●●●●20●●●●●●●●30●●●●●●●●40●●●●●●●●50●●●●●●●●60●●●●●●●●70●●●●●●●●80●●●●●●●●90●●●●●●●●100
+      </p>
+    </div>
+    <div class="voice">
+      <Image
+        src={voice2}
+        alt=""
+        class="face"
+        loading="lazy"
+        widths={[200, 300, 400, 600]}
+        sizes="(max-width: 768px) 90vw, (max-width: 1024px) 30vw, 23vw"
+      />
+      <p class="name">山田 太郎(北海道)</p>
+      <p class="content">
+        ●●●●●●●●10●●●●●●●●20●●●●●●●●30●●●●●●●●40●●●●●●●●50●●●●●●●●60●●●●●●●●70●●●●●●●●80●●●●●●●●90●●●●●●●●100
+      </p>
+    </div>
+    <div class="voice">
+      <Image
+        src={voice3}
+        alt=""
+        class="face"
+        loading="lazy"
+        widths={[200, 300, 400, 600]}
+        sizes="(max-width: 768px) 90vw, (max-width: 1024px) 30vw, 23vw"
+      />
+      <p class="name">山田 太郎(北海道)</p>
+      <p class="content">
+        ●●●●●●●●10●●●●●●●●20●●●●●●●●30●●●●●●●●40●●●●●●●●50●●●●●●●●60●●●●●●●●70●●●●●●●●80●●●●●●●●90●●●●●●●●100
+      </p>
+    </div>
+  </div>
+</div>
+<style>
+  .container {
+    padding: 1rem 0;
+  }
+
+  .wrapper {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+    gap: 2rem;
+  }
+
+  .voice {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .face {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .content {
+    overflow-wrap: break-word;
+    word-break: break-all;
+    width: 100%;
+  }
+
+  /* モバイル: ~768px */
+  @media (max-width: 768px) {
+    .wrapper {
+      width: 90%;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .face {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    .content {
+      font-size: 0.9rem;
+    }
+  }
+
+  /* タブレット: 768px~1024px */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .wrapper {
+      width: 85%;
+      gap: 1.5rem;
+    }
+
+    .content {
+      font-size: 0.95rem;
+    }
+  }
+
+  /* デスクトップ（小）: 1024px~1280px */
+  @media (min-width: 1024px) and (max-width: 1280px) {
+    .wrapper {
+      width: 75%;
+      gap: 1.5rem;
+    }
+  }
+
+  /* 大画面: 1440px~ */
+  @media (min-width: 1440px) {
+    .wrapper {
+      max-width: 1200px;
+    }
+  }
+
+  /* 超大画面: 1920px~ */
+  @media (min-width: 1920px) {
+    .wrapper {
+      max-width: 1400px;
+    }
+  }
+</style>

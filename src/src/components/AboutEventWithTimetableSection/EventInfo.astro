@@ -1,0 +1,77 @@
+---
+import TrapezoidWithBorderBottom from "./TrapezoidWithBorderBottom.astro";
+---
+
+<TrapezoidWithBorderBottom title="開催情報">
+  <div slot="content">
+    <time class="date-of-the-event" datetime="2025-11-26T13:00">
+      2025年
+      <span class="accent">11</span>
+      月
+      <span class="accent">26</span>
+      日
+      <span class="accent">(水)</span>
+      <span class="event-time-range">
+        <time datetime="2025-11-26T13:30">13:30</time> 〜
+        <time datetime="2025-11-26T16:30">16:30</time>
+      </span>
+    </time>
+    <p class="venue">メタバース空間にて開催</p>
+  </div>
+</TrapezoidWithBorderBottom>
+<style>
+  * {
+    font-family: sans-serif;
+    font-weight: bold;
+  }
+
+  .date-of-the-event {
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    font-family: sans-serif;
+    font-weight: bold;
+  }
+
+  .accent {
+    font-size: 2.5rem;
+  }
+
+  .event-time-range {
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  .venue {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .date-of-the-event {
+      font-size: 1.5rem;
+    }
+
+    .accent {
+      font-size: 2rem;
+    }
+
+    .venue {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .date-of-the-event {
+      font-size: 1.2rem;
+    }
+
+    .accent {
+      font-size: 1.6rem;
+    }
+
+    .venue {
+      font-size: 1.2rem;
+    }
+  }
+</style>

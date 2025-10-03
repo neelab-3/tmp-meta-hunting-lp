@@ -1,0 +1,160 @@
+---
+import { Image } from "astro:assets";
+import mock from "../../assets/about-event-with-timetable-section/mock.png";
+import TrapezoidWithBorderBottom from "./TrapezoidWithBorderBottom.astro";
+---
+
+<TrapezoidWithBorderBottom title="参加企業紹介（一部）" mb="0">
+  <div class="companies-grid" slot="content">
+    <div class="company-item">
+      <Image src={mock} alt="" />
+      <p class="company-industry">&lt;業種が入ります&gt;</p>
+      <p class="company-name">社名が入ります</p>
+      <p class="company-description">事業内容の簡単な説明が入ります</p>
+      <p class="company-description">事業内容の簡単な説明が入ります</p>
+      <p class="company-description">事業内容の簡単な説明が入ります</p>
+    </div>
+    <div class="company-item">
+      <Image src={mock} alt="" />
+      <p class="company-industry">&lt;業種が入ります&gt;</p>
+      <p class="company-name">社名が入ります</p>
+      <p class="company-description">事業内容の簡単な説明が入ります</p>
+      <p class="company-description">事業内容の簡単な説明が入ります</p>
+      <p class="company-description">事業内容の簡単な説明が入ります</p>
+    </div>
+    <div class="company-item">
+      <Image src={mock} alt="" />
+      <p class="company-industry">&lt;業種が入ります&gt;</p>
+      <p class="company-name">社名が入ります</p>
+      <p class="company-description">事業内容の簡単な説明が入ります</p>
+      <p class="company-description">事業内容の簡単な説明が入ります</p>
+      <p class="company-description">事業内容の簡単な説明が入ります</p>
+    </div>
+    <div class="company-item">
+      <Image src={mock} alt="" />
+      <p class="company-industry">&lt;業種が入ります&gt;</p>
+      <p class="company-name">社名が入ります</p>
+      <p class="company-description">事業内容の簡単な説明が入ります</p>
+      <p class="company-description">事業内容の簡単な説明が入ります</p>
+      <p class="company-description">事業内容の簡単な説明が入ります</p>
+    </div>
+    <div class="company-item">
+      <Image src={mock} alt="" />
+      <p class="company-industry">&lt;業種が入ります&gt;</p>
+      <p class="company-name">社名が入ります</p>
+      <p class="company-description">事業内容の簡単な説明が入ります</p>
+      <p class="company-description">事業内容の簡単な説明が入ります</p>
+      <p class="company-description">事業内容の簡単な説明が入ります</p>
+    </div>
+    <div class="company-item">
+      <Image src={mock} alt="" />
+      <p class="company-industry">&lt;業種が入ります&gt;</p>
+      <p class="company-name">社名が入ります</p>
+      <p class="company-description">事業内容の簡単な説明が入ります</p>
+      <p class="company-description">事業内容の簡単な説明が入ります</p>
+      <p class="company-description">事業内容の簡単な説明が入ります</p>
+    </div>
+    <div class="company-item">
+      <Image src={mock} alt="" />
+      <p class="company-industry">&lt;業種が入ります&gt;</p>
+      <p class="company-name">社名が入ります</p>
+      <p class="company-description">事業内容の簡単な説明が入ります</p>
+      <p class="company-description">事業内容の簡単な説明が入ります</p>
+      <p class="company-description">事業内容の簡単な説明が入ります</p>
+    </div>
+    <div class="company-item">
+      <Image src={mock} alt="" />
+      <p class="company-industry">&lt;業種が入ります&gt;</p>
+      <p class="company-name">社名が入ります</p>
+      <p class="company-description">事業内容の簡単な説明が入ります</p>
+      <p class="company-description">事業内容の簡単な説明が入ります</p>
+      <p class="company-description">事業内容の簡単な説明が入ります</p>
+    </div>
+    <div class="company-item">
+      <Image src={mock} alt="" />
+      <p class="company-industry">&lt;業種が入ります&gt;</p>
+      <p class="company-name">社名が入ります</p>
+      <p class="company-description">事業内容の簡単な説明が入ります</p>
+      <p class="company-description">事業内容の簡単な説明が入ります</p>
+      <p class="company-description">事業内容の簡単な説明が入ります</p>
+    </div>
+  </div>
+</TrapezoidWithBorderBottom>
+
+<style>
+  .companies-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 5px;
+  }
+
+  .company-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #ffffff;
+    padding: 16px;
+    background-color: transparent;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .company-logo {
+    width: 100%;
+    max-width: 200px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 12px;
+  }
+
+  .company-industry {
+    font-weight: bold;
+    color: #ffffff;
+    margin: 8px 0;
+    font-size: 14px;
+  }
+
+  .company-name {
+    font-weight: bold;
+    color: #ffffff;
+    margin: 8px 0;
+    font-size: 16px;
+  }
+
+  .company-description {
+    color: #ffffff;
+    margin: 4px 0;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .companies-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .companies-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .company-item {
+      padding: 12px;
+    }
+
+    .company-industry,
+    .company-description {
+      font-size: 13px;
+    }
+
+    .company-name {
+      font-size: 15px;
+    }
+  }
+</style>

@@ -1,0 +1,40 @@
+---
+const { text, color, ml = "0" } = Astro.props;
+---
+
+<h3 class="ideal" style=`color: ${color}; --ml: ${ml}`>{text}</h3>
+<style>
+  .ideal {
+    position: relative;
+    z-index: 2;
+    font-size: clamp(0.9rem, 2vw, 1.5rem);
+    background-color: white;
+    text-align: center;
+    margin: 20px 0;
+    margin-left: var(--ml, 0);
+    padding: 5px 20px;
+    width: fit-content;
+    white-space: nowrap;
+    clip-path: polygon(
+      /* 左上 */ 3% 0%,
+      /* 右上 */ 100% 0%,
+      /* 右下（斜め） */ 97% 100%,
+      /* 左下（斜め */ 0% 100%
+    );
+    box-shadow:
+      6px 6px 25px rgba(50, 0, 50, 0.8),
+      3px 3px 10px rgba(30, 0, 30, 0.6);
+  }
+
+  @media (max-width: 1024px) {
+    .ideal {
+      margin-left: 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .ideal {
+      font-size: clamp(0.75rem, 2vw, 1.5rem);
+    }
+  }
+</style>

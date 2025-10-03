@@ -1,0 +1,159 @@
+<div class="wrapper">
+  <div class="cta-text">
+    <span class="cta-text--accent">公式LINEの友だち追加はコチラ</span>
+  </div>
+  <div class="about-limit">
+    <span>&bsol;先着150名様限定&sol;</span>
+  </div>
+  <div class="cta-button--wrapper">
+    <button type="button" class="cta-button">
+      <p class="join-text">
+        無料でイベントに参加する
+        <br />
+        <span class="join-text--small">&lt; 簡単30秒LINE登録 &gt;</span>
+      </p>
+      <span class="right">&gt;</span>
+    </button>
+  </div>
+</div>
+<style>
+  * {
+    font-family: sans-serif;
+  }
+
+  .wrapper {
+    margin: 0 auto;
+  }
+
+  .cta-text {
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: white;
+    position: relative;
+    padding: 5px;
+    border-radius: 0;
+    margin: 0 auto 10px auto;
+    max-width: 400px;
+    border: 1px solid #ddd;
+  }
+
+  .cta-text--accent {
+    color: #07c655;
+  }
+
+  .about-limit {
+    font-size: 2rem;
+  }
+
+  .cta-text:before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid white;
+  }
+
+  .cta-text:after {
+    content: "";
+    position: absolute;
+    bottom: -11px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
+    border-top: 11px solid #ddd;
+    z-index: -1;
+  }
+
+  .about-limit {
+    text-align: center;
+  }
+
+  .cta-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #07c655;
+    margin: 0 auto;
+    padding: 1.5rem 5rem;
+    border-radius: 80px;
+    border: none;
+  }
+
+  .join-text {
+    width: 100%;
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  .join-text--small {
+    font-size: 1rem;
+  }
+
+  .right {
+    position: absolute;
+    right: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .cta-text {
+      font-size: 1.3rem;
+      max-width: 350px;
+    }
+
+    .about-limit {
+      font-size: 1.7rem;
+    }
+
+    .cta-button {
+      padding: 1.2rem 3.5rem;
+    }
+
+    .join-text {
+      font-size: 1.7rem;
+    }
+
+    .join-text--small {
+      font-size: 0.9rem;
+    }
+
+    .right {
+      right: 15px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .cta-text {
+      font-size: 1.1rem;
+      max-width: 300px;
+      padding: 4px;
+    }
+
+    .about-limit {
+      font-size: 1.4rem;
+    }
+
+    .cta-button {
+      padding: 1rem 2.5rem;
+    }
+
+    .join-text {
+      font-size: 1.4rem;
+    }
+
+    .join-text--small {
+      font-size: 0.8rem;
+    }
+
+    .right {
+      right: 12px;
+    }
+  }
+</style>
