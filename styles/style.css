@@ -1,0 +1,8 @@
+* {
+    color: white;
+    font-family: "makinas-4-square", sans-serif;
+}
+
+button:hover {
+    cursor: pointer;
+}
