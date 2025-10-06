@@ -25,7 +25,6 @@ import borderArrow from "../../assets/flow-section/border_arrow.png";
           color="#ffffff"
         />
       </div>
-      <!-- TODO: LINEの登録へ遷移するように変更 -->
       <button
         class="appeal-section--cta-button"
         type="button"
@@ -236,19 +235,6 @@ import borderArrow from "../../assets/flow-section/border_arrow.png";
     display: flex;
   }
 
-  .img {
-    width: 500px;
-    height: 500px;
-    margin: 0 auto;
-    object-fit: contain;
-    clip-path: polygon(
-      /* 左上 */ 0% 0%,
-      /* 右上 */ 100% 0%,
-      /* 右下（斜め） */ 97% 100%,
-      /* 左下（斜め） */ 0% 100%
-    );
-  }
-
   .list-container {
     margin-top: 25px;
     margin-bottom: 25px;
@@ -269,56 +255,6 @@ import borderArrow from "../../assets/flow-section/border_arrow.png";
     left: calc(50% - 2rem);
     bottom: -70px;
   }
-
-  #appeal-section {
-    display: flex;
-    position: relative;
-    border-top: 3px solid #20a6a9;
-    border-bottom: 3px solid #20a6a9;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-    width: 100%;
-  }
-
-  #appeal-section::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: url("../../assets/appeal-section/appeal-section.jpeg") no-repeat
-      center center;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: brightness(0.3);
-    z-index: -5;
-    height: 100px;
-    width: 100%;
-  }
-
-  .appeal-section--content {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    color: white;
-  }
-
-  .appeal-section--title {
-    font-size: 4rem;
-    margin-right: 1rem;
-  }
-
-  .appeal-section--date {
-    font-size: 1.5rem;
-    margin: 0;
-    padding-top: 0.7rem;
-  }
-
-  .appeal-section--date--big {
-    font-size: 2rem;
-    font-weight: bold;
-  }
-
   .appeal-section--cta-button {
     display: flex;
     position: relative;

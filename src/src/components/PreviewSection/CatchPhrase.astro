@@ -1,22 +1,19 @@
 ---
 import { Image } from "astro:assets";
 import logo from "../../assets/preview-section/logo.png";
-import GatherTogether from "./GatherTogether.astro";
 ---
 
 <h3 id="catch-phrase">
   それが
   <div class="logo-container">
-    <span class="logo-text">メタバース新卒×就職イベント</span>
     <Image
       src={logo}
       alt="メタバース新卒ロゴ"
       class="logo"
-      width={350}
+      width={300}
       height={123}
       loading="lazy"
     />
-    <GatherTogether />
   </div>
   です。
 </h3>
@@ -68,17 +65,6 @@ import GatherTogether from "./GatherTogether.astro";
     z-index: 100;
   }
 
-  .logo-text {
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: #add8f4;
-    position: absolute;
-    z-index: 100;
-    top: 0.6em;
-    left: 10px;
-    white-space: nowrap;
-  }
-
   /* タブレット: 768px~1024px */
   @media (min-width: 768px) and (max-width: 1024px) {
     #catch-phrase {
@@ -94,11 +80,6 @@ import GatherTogether from "./GatherTogether.astro";
 
     .logo {
       width: 280px;
-    }
-
-    .logo-text {
-      font-size: 0.75rem;
-      left: 5px;
     }
   }
 
@@ -117,12 +98,6 @@ import GatherTogether from "./GatherTogether.astro";
 
     .logo {
       width: 210px;
-    }
-
-    .logo-text {
-      font-size: 0.65rem;
-      left: -5px;
-      top: 1em;
     }
   }
 
@@ -143,12 +118,6 @@ import GatherTogether from "./GatherTogether.astro";
     .logo {
       width: 168px;
     }
-
-    .logo-text {
-      font-size: 0.45rem;
-      left: 2px;
-      top: 1.5em;
-    }
   }
 
   /* モバイル（極小）: ~360px */
@@ -168,12 +137,6 @@ import GatherTogether from "./GatherTogether.astro";
     .logo {
       width: 180px;
       height: auto;
-    }
-
-    .logo-text {
-      font-size: 0.35rem;
-      left: 1px;
-      top: 0.7em;
     }
   }
 </style>

@@ -9,16 +9,8 @@ import logo from "../../assets/hero-section/logo.png";
   </h3>
   <div class="hero-section--logo-group">
     <h1 id="hero-section--title">
-      <div class="logo-wrapper">
-        <Image id="hero-section--logo" src={logo} alt="メタ就" />
-        <p id="hero-section--concept">メタバース新卒×就活イベント</p>
-      </div>
+      <Image id="hero-section--logo" src={logo} alt="メタ就" />
     </h1>
-    <div class="hero-section--subtitle-wrapper">
-      <div class="diagonal-stripes"></div>
-      <h2 class="hero-section--subtitle">あつまれ就活の森</h2>
-      <div class="diagonal-stripes"></div>
-    </div>
   </div>
   <h4 class="support-details">メタ就は、合同説明会だけで終わらない！</h4>
   <h4 class="support-details transform-right">
@@ -46,61 +38,11 @@ import logo from "../../assets/hero-section/logo.png";
     margin: 0 auto;
   }
 
-  #hero-section--title {
-    font-size: 9rem;
-    line-height: 1;
-    display: flex;
-    justify-content: center;
-  }
-
-  .logo-wrapper {
-    position: relative;
-  }
-
   #hero-section--logo {
     height: 100px;
     width: auto;
     display: block;
-  }
-
-  #hero-section--concept {
-    position: absolute;
-    top: 10%;
-    left: 9.5%;
-    font-weight: bold;
-    font-size: 0.7rem;
-    font-family: sans-serif;
-    color: #add8f4;
-  }
-
-  .hero-section--subtitle-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-  }
-
-  .diagonal-stripes {
-    width: 40px;
-    height: 10px;
-    background: repeating-linear-gradient(
-      /* 斜め方向（左上→右下） */ 135deg,
-      transparent 6px,
-      /* ストライプ間隔を狭く（10px） */ transparent 10px,
-      white 10px,
-      /* 白線の太さは2px */ white 12px
-    );
-    border-radius: 1px;
-  }
-
-  .hero-section--subtitle {
-    font-size: 1.3rem;
-    color: white;
-    font-weight: bold;
-    letter-spacing: 0.1em;
-    line-height: 1;
-    white-space: nowrap;
+    margin: 0 auto;
   }
 
   .support-details {
@@ -130,24 +72,6 @@ import logo from "../../assets/hero-section/logo.png";
       height: 150px;
     }
 
-    #hero-section--concept {
-      font-size: 1rem;
-    }
-
-    .hero-section--subtitle-wrapper {
-      gap: 0.8rem;
-      margin-top: 0.8rem;
-    }
-
-    .diagonal-stripes {
-      width: 70px;
-      height: 12px;
-    }
-
-    .hero-section--subtitle {
-      font-size: 2rem;
-    }
-
     .support-details {
       font-size: min(2vw, 1.5rem);
       max-width: 80%;
@@ -167,24 +91,6 @@ import logo from "../../assets/hero-section/logo.png";
 
     #hero-section--logo {
       height: 200px;
-    }
-
-    #hero-section--concept {
-      font-size: 1.3rem;
-    }
-
-    .hero-section--subtitle-wrapper {
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .diagonal-stripes {
-      width: 90px;
-      height: 15px;
-    }
-
-    .hero-section--subtitle {
-      font-size: 2.5rem;
     }
 
     .support-details {
